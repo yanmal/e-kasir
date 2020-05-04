@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Form Kasir</title>
+	<link rel="stylesheet" href="dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="dist/css/select2.min.css" />
+	<link rel="stylesheet" href="dist/css/select2-bootstrap4.min.css" />
+	<link rel="stylesheet" href="dist/css/animate.css/animate.min.css" />
+	<link rel="stylesheet" href="dist/css/style.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+
+	<div class="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12 mt-5 mb-5">
+					<h2>
+						<strong>E-Kasir v1.0</strong>
+						<small class="float-right mt-2">
+							Pendapatan : Rp. <strong id="pendapatan"></strong>
+						</small>
+					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid mt--6">
+		<div class="kartu fadeInDown animated">
+			<div class="kartu-judul">
+				<h6 class="text-muted text-uppercase ls-1">Masukkan data pembelian</h6>
+			</div>
+			<div class="kartu-body">
+				<div class="row">
+					<div class="col-md-5">
+						<label for="menu">Menu</label>
+						<select class="form-control" id="menu">
+							<option value="Pilih">Pilih</option>
+						</select>
+					</div>
+					<div class="col-md-2">
+						<label for="qty">Qty</label>
+						<input type="number" min="0" value="1" name="qty" id="qty" class="form-control" placeholder="qty">
+					</div>
+					<div class="col-md-3">
+						<label for="harga">Harga</label>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">Rp</span>
+							</div>
+							<input type="number" name="harga" id="harga" class="form-control" placeholder="harga" readonly="">
+						</div>
+					</div>
+					<div class="col-md-2">
+						<br>
+						<button class="btn btn-primary btn-block" id="add" style="margin-top: .5rem">
+							<i class="fa fa-plus-circle" aria-hidden="true"></i> Tambah
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- list belanja -->
+	<div class="container-fluid">
+		<div class="kartu fadeInUp animated">
+			<div class="kartu-judul">
+				<h6 class="text-muted text-uppercase ls-1">
+					List Pesanan
+					<button class="btn btn-warning text-white float-right" data-toggle="modal" data-target="#transaksi">
+						<i class="fa fa-cart-plus fa-lg mr-2"></i>Check Out
+					</button>
+				</h6>
+			</div>
+			<div class="kartu-body mb-0">
+				<div class="row">
+					<div class="col">
+						<table class="table table-striped">
+							<thead>
+								<th>#</th>
+								<th>MENU</th>
+								<th>HARGA</th>
+								<th>QTY</th>
+								<th>SUB TOTAL</th>
+							</thead>
+							<tbody id="pesanan">
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="4"></td>
+									<td><h5 id="total" class="text-uppercase ls-1 text-primary"></h5></td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="text-muted text-uppercase ls-1 text-center mb-2">
+		<small>~ Create with <i class="fa fa-heart text-danger"></i>, [ MIT License ] ~</small>
+	</footer>
+
+	<!-- modal check out -->
+	<div class="modal fade" id="transaksi">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Total Bayar = 0</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<label for="bayar">Jumlah Bayar</label>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Rp</span>
+						</div>
+						<input type="number" class="form-control" placeholder="jumlah bayar" id="bayar">
+					</div>
+					<label for="kembalian">Jumlah Kembalian</label>
+					<div class="input-group mb-3">
+						<h4 class="text-dark" id="kembalian"></h4>
+						<!-- <div class="input-group-prepend">
+							<span class="input-group-text">Rp</span>
+						</div>
+						<input type="text" class="form-control" placeholder="jumlah bayar" id="kembalian" readonly=""> -->
+					</div>
+				</div>
+				<div class="modal-footer justify-content-between">
+					<button class="btn btn-lg btn-success btn-block" data-dismiss="modal" id="reset">Selesai</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
+	<script src="dist/js/jquery.min.js"></script>
+	<script src="dist/js/bootstrap.min.js"></script>
+	<script src="dist/js/select2.full.min.js"></script>
+	<script src="dist/js/data.js"></script>
+	<script src="dist/js/script.js"></script>
+</body>
+</html>

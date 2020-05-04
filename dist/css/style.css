@@ -1,0 +1,81 @@
+.container-fluid {
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.header {
+	position: relative;
+	padding-bottom: 5rem !important;
+	background: linear-gradient(87deg, #11cdef 0, #1171ef 100%) !important;
+	color: #ffff;
+	border-bottom-left-radius: 30%;
+	border-bottom-right-radius: 30%;
+}
+
+body {
+	background-color: #f8f9fe;
+}
+
+.kartu {
+	margin-bottom: 30px;
+	border: 0;
+	box-shadow: 0 0 1rem 0 rgba(136, 152, 170, .15);
+}
+
+.kartu {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	border: 1px solid rgba(0, 0, 0, .05);
+	border-radius: .375rem;
+	background-color: #fff;
+	background-clip: border-box;
+	/*padding: 1.25rem 1.5rem;*/
+}
+
+.kartu-judul:first-child {
+	border-radius: calc(.375rem - 1px) calc(.375rem - 1px) 0 0;
+}
+
+.kartu-judul {
+	margin-bottom: 0;
+	padding: 1.25rem 1.5rem;
+	border-bottom: 1px solid rgba(0, 0, 0, .05);
+	background-color: #fff;
+}
+
+.kartu-body {
+	min-height: 1px;
+	padding: 1.5rem;
+	flex: 1 1 auto;
+}
+
+.kartu-footer {
+	margin-bottom: 0;
+	padding: 1.25rem 1.5rem;
+	border-top: 1px solid rgba(0, 0, 0, .05);
+	background-color: #fff;
+}
+
+.ls-1 {
+	letter-spacing: .0625rem;
+}
+
+.mt--6 {
+	margin-top: -3.5rem !important;
+}
+
+@media only screen and (max-width: 700px) {
+	.container-fluid {
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}

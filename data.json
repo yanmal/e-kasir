@@ -1,0 +1,27 @@
+{
+	[
+		{
+			"menu" 	: "Kopi Latte",
+			"harga" : "20000"
+		},
+		{
+			"menu"	: "Kopi Tubruk",
+			"harga"	: "10000"
+		},
+		{
+			"menu"	: "Kopi Cappucino",
+			"harga"	: "20000"
+		},
+		{
+			"menu"	: "Jus Alpukat",
+			"harga"	: "15000"
+		},
+		{
+			"menu"	: "Jus Jeruk",
+			"harga"	: "15000"
+		},
+		{
+			"menu"	: "Roti Bakar Keju",
+			"harga"	: "15000"
+		}
+	]
